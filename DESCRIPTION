@@ -1,0 +1,23 @@
+Package: scrapRSS
+Type: Package
+Title: Scrapea el RSS de un periódico y devuelve un json con las noticas del día actual.
+Version: 0.1.0
+Author: Kepa Amigo Cañibano
+Maintainer: Kepa Amigo Cañibano <kepa@techfriendly.es>
+Description: Recibe la URL RSS de un periódico, lo scrapea, devuelve un json con las noticas del día actual y envía las noticias a la plataforma Smart City.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports:
+  xml2,
+  plyr,
+  purrr,
+  stringr,
+  tidyverse,
+  tidyRSS,
+  data.table,
+  janitor,
+  anytime,
+  jsonlite,
+  httr
+RoxygenNote: 7.0.2
