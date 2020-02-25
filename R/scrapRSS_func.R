@@ -389,8 +389,8 @@ scrap_RSS <- function(url){
   json_noticias_return <- toJSON(data_frame_noticias_fecha_actual,pretty=T)
 
   #Parámetros envío JSON a plataforma
-  TB_token <- "prueba_noticias_kepa"
-  TB_url   <- paste("http://88.99.184.239:8080/api/v1/",TB_token,"/telemetry",sep="")
+  TB_token <- "GYgibdpRr7ioAj214ozf"
+  TB_url   <- paste("http://94.130.77.253:8080/api/v1/",TB_token,"/telemetry",sep="")
 
   for(i in 1:nrow(data_frame_noticias_fecha_actual)){
     #Extracción timestamp en formato unix de item_pubDate
