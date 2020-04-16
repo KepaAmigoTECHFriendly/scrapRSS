@@ -138,8 +138,8 @@ scrap_RSS <- function(url){
         if(!any(grepl(anydate(Sys.Date()), v_item_date_get, ignore.case = TRUE))){
 
           #Parámetros envío JSON a plataforma
-          TB_token <- "prueba_noticias_kepa"
-          TB_url   <- paste("http://88.99.184.239:8080/api/v1/",TB_token,"/telemetry",sep="")
+          TB_token <- "mLTknfnPGOeBS2bmRaMJ"
+          TB_url   <- paste("http://78.47.39.122:8080/api/v1/",TB_token,"/telemetry",sep="")
 
           ts <- format(as.numeric(anytime(Sys.time()))*1000,scientific = F)
           json_noticias <- paste('{"AVISO": "NO HAY NOTICIAS PARA LA FECHA DE HOY PARA: ',url,'"}')
@@ -255,7 +255,7 @@ scrap_RSS <- function(url){
         }
 
         # Posici?n noticias de fecha actual
-        pos_noticias_actuales <- grep(anydate(Sys.time()), feed_date_get, ignore.case = TRUE)
+        pos_noticias_actuales <- grep(anydate(Sys.Date()), feed_date_get, ignore.case = TRUE)
 
         # Eliminiaci?n de la lista feed
         list_feed_tags <- list_feed_tags[- grep("date", str_feed_tags, ignore.case = TRUE)]
@@ -389,8 +389,8 @@ scrap_RSS <- function(url){
   json_noticias_return <- toJSON(data_frame_noticias_fecha_actual,pretty=T)
 
   #Parámetros envío JSON a plataforma
-  TB_token <- "GYgibdpRr7ioAj214ozf"
-  TB_url   <- paste("http://94.130.77.253:8080/api/v1/",TB_token,"/telemetry",sep="")
+  TB_token <- "mLTknfnPGOeBS2bmRaMJ"
+  TB_url   <- paste("http://78.47.39.122:8080/api/v1/",TB_token,"/telemetry",sep="")
 
   for(i in 1:nrow(data_frame_noticias_fecha_actual)){
     #Extracción timestamp en formato unix de item_pubDate
